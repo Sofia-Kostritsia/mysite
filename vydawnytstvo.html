@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>Modern Ukrainian Literary</title>
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css">
+    </header>
+    <body id="info-body" class="body">
+    <div>
+        <div class="container">
+            <button class="menu-butt" onclick="showModal('content-menu')"><img src="img/menu.png"></button>
+            <div class="menu">
+                <menu class="content-menu" id="content-menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <hr>
+                    <li class="active">Видавництва</li>
+                    <hr>
+                    <li><a href="authors.html">Жанри</a></li>
+                    <hr>
+                </menu>
+            </div>
+            <div class="form">
+                <form action="#">
+                    <button type="submit"><img src="img/Лупа.png"></button>
+                    <input type="text" id="search-input" name="search" placeholder="Enter search term">
+                    
+                </form>
+            </div>
+            <button class="menu-akk" onclick="showModal('profile-menu')"><img src="img/akk.png"></button>
+            <div class="menu">
+                <menu class="profile-menu" id="profile-menu">
+                    <li>Мої колекції</li>
+                    <hr>
+                    <li>Реєстрація</li>
+                    <hr>
+                    <li>Вхід</li>
+                    <hr>
+                </menu>
+            </div>
+        </div>
+        <div class="vydav-container">
+            
+            <div class="up-vydav">
+                <div class="vydav" onclick="showModal('КСД')">
+                    <a href="https://bookclub.ua/"><img src="img/vydav/KSD.jfif"></a>
+                </div>
+                <div class="vydav" onclick="showModal('book1')">
+                    <a href="https://vivat.com.ua/"><img src="img/vydav/Vivat.png"></a>
+                </div>
+            </div>
+            <div class="down-vydav">
+                <div class="vydav" onclick="showModal('book1')">
+                    <a href="https://ridna-mova.com/"><img src="img/vydav/RM.png"></a>
+                </div>
+                <div class="vydav" onclick="showModal('book1')">
+                    <a href="https://www.meridiancz.com/"><img src="img/vydav/meridian-chernovitz.png"></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+    <footer>
+        <p>Сайт створили студентки групи 3-В Костриця Софія та Дробницька Софія</p>
+        <script src="js/jquery.js"></script>
+        <script src="js/dist/bundle.js"></script>
+        <script>
+
+            let count=1;
+            function showModal(bookId) {
+            
+            count = (count>0) ? count-1 : 1;
+            if(count == 0) document.getElementById(bookId).style.display = 'block';
+            if(count == 1) document.getElementById(bookId).style.display = 'none';
+        }
+        </script>
+    </footer>
+    </html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>Modern Ukrainian Literary</title>
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css">
+    </header>
+    <body id="info-body" class="body">
+    <div>
+        <div class="container">
+            <button class="menu-butt" onclick="showBlock('content-menu')"><img src="img/menu.png"></button>
+            <div class="menu">
+                <menu class="content-menu" id="content-menu">
+                    <li class="active">Головна</li>
+                    <hr>
+                    <li><a href="vydawnytstvo.html">Видавництва</a></li>
+                    <hr>
+                    <li><a href="authors.html">Жанри</a></li>
+                    <hr>
+                </menu>
+            </div>
+            <div class="form">
+                <form action="#" onsubmit="return searchByTitle()">
+                    <button type="submit"><img src="img/Лупа.png"></button>
+                    <input type="text" id="search-input" name="search" placeholder="Enter search term">
+                </form>
+            </div>
+            <button class="menu-akk" onclick="showBlock('profile-menu')"><img src="img/akk.png"></button>
+            <div class="menu">
+                <menu class="profile-menu" id="profile-menu">
+                    <li>Мої колекції</li>
+                    <hr>
+                    <li>Реєстрація</li>
+                    <hr>
+                    <li>Вхід</li>
+                    <hr>
+                </menu>
+            </div>
+        </div>
+        <h1>Найкращі книги цього <br> місяця!</h1>
+        <div class="book-container ">
+            
+            <div>
+                <div class="book" id="first" onclick="showModal('1')">
+                    <img src="img/internat.png" alt="Книга 1">
+                </div>
+            </div>
+            <div>
+                <div class="book" id="second" onclick="showModal('2')">
+                    <img src="img/krylo.png" alt="Книга 1">
+                </div>
+            </div>
+            <div>
+                <div class="book" id="third" onclick="showModal('3')">
+                    <img src="img/Drama.png" alt="Книга 1">
+                </div>
+            </div>
+            <div>
+                <div class="book" id="four" onclick="showModal('4')">
+                    <img src="img/obitnytsi.png" alt="Книга 1">
+                </div>
+            </div>
+            <div>
+                <div class="book" id="five" onclick="showModal('5')">
+                    <img src="img/istoria.png" alt="Книга 1">
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div id="1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('1')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/internat.png">
+                    </div>
+                    <div class="text-info" id="1-text">
+                        <P>ID: </P>
+                        <P>Назва книги: </P>
+                        <p>Автор: </p>
+                        <p>Тип ресурсу: </p>
+                        <p>Кількість сторінок: </p>
+                        <p>Рік видання: </p>
+                        <p>ISBN: </p>
+                    </div>
+                </div>
+            </div>
+            <div id="2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('2')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/krylo.png">
+                    </div>
+                    <div class="text-info" id="2-text">
+                        <P>ID: </P>
+                        <P>Назва книги: </P>
+                        <p>Автор: </p>
+                        <p>Тип ресурсу: </p>
+                        <p>Кількість сторінок: </p>
+                        <p>Рік видання: </p>
+                        <p>ISBN: </p>
+                    </div>
+                </div>
+            </div>
+            <div id="3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('3')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/Drama.png">
+                    </div>
+                    <div class="text-info" id="3-text">
+                        <P>ID: </P>
+                        <P>Назва книги: </P>
+                        <p>Автор: </p>
+                        <p>Тип ресурсу: </p>
+                        <p>Кількість сторінок: </p>
+                        <p>Рік видання: </p>
+                        <p>ISBN: </p>
+                    </div>
+                </div>
+            </div>
+            <div id="4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('4')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/obitnytsi.png">
+                    </div>
+                    <div class="text-info" id="4-text">
+                        <P>ID: </P>
+                        <P>Назва книги: </P>
+                        <p>Автор: </p>
+                        <p>Тип ресурсу: </p>
+                        <p>Кількість сторінок: </p>
+                        <p>Рік видання: </p>
+                        <p>ISBN: </p>
+                    </div>
+                </div>
+            </div>
+            <div id="5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('5')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/istoria.png">
+                    </div>
+                    <div class="text-info" id="5-text">
+                        <P>ID: </P>
+                        <P>Назва книги: </P>
+                        <p>Автор: </p>
+                        <p>Тип ресурсу: </p>
+                        <p>Кількість сторінок: </p>
+                        <p>Рік видання: </p>
+                        <p>ISBN: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <footer>
+        <p>Сайт створили студентки групи 3-В Костриця Софія та Дробницька Софія</p>
+        <script src="js/jquery.js"></script>
+        <script src="js/dist/bundle.js"></script>
+        <script>
+            function showModal(bookId) {
+                document.getElementById(bookId).style.display = 'flex';
+                
+                // Завантаження даних з сервера
+                fetch(`book.php?book_id=${bookId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            document.getElementById(`${bookId}-text`).innerHTML = `<p>${data.error}</p>`;
+                        } else {
+                            document.getElementById(`${bookId}-text`).innerHTML = `
+                                <p><strong>ID:</strong> ${data.ID_Book}</p>
+                                <p><strong>Назва книги:</strong> ${data.NameOfBook}</p>
+                                <p><strong>Автор:</strong> ${data.Author}</p>
+                                <p><strong>Жанр:</strong> ${data.Genre}</p>
+                                <p><strong>Тип ресурсу:</strong> ${data.TypeOf}</p>
+                                <p><strong>Кількість сторінок:</strong> ${data.CountOfPages}</p>
+                                <p><strong>Рік видання:</strong> ${data.YearOf}</p>
+                                <p><strong>Видавництво:</strong> ${data.Vydavnytstvo}</p>
+                                <p><strong>ISBN:</strong> ${data.ISBN}</p>
+                            `;
+                        }
+                    })
+                    .catch(error => {
+                        document.getElementById(`${bookId}-text`).innerHTML = `<p>Помилка завантаження даних: ${error}</p>`;
+                    });
+            }
+        
+            function closeModal(bookId) {
+                document.getElementById(bookId).style.display = 'none';
+            }
+        
+            let count=1;
+            function showBlock(bookId) {
+            
+            count = (count>0) ? count-1 : 1;
+            if(count == 0) document.getElementById(bookId).style.display = 'block';
+            if(count == 1) document.getElementById(bookId).style.display = 'none';
+        }
+
+        
+        </script>
+        
+    </footer>
+</body>
+</html>

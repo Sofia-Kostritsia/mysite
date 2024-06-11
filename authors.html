@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>Modern Ukrainian Literary</title>
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css">
+    </header>
+    <body id="info-body" class="body">
+    <div>
+        <div class="container">
+            <button class="menu-butt" onclick="showModal('content-menu')"><img src="img/menu.png"></button>
+            <div class="menu">
+                <menu class="content-menu" id="content-menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <hr>
+                    <li><a href="vydawnytstvo.html">Видавництва</a></li>
+                    <hr>
+                    <li class="active">Жанри</li>
+                    <hr>
+                </menu>
+            </div>
+            <div class="form">
+                <form action="#">
+                    <button type="submit"><img src="img/Лупа.png"></button>
+                    <input type="text" id="search-input" name="search" placeholder="Enter search term">
+                    
+                </form>
+            </div>
+            <button class="menu-akk" onclick="showModal('profile-menu')"><img src="img/akk.png"></button>
+            <div class="menu">
+                <menu class="profile-menu" id="profile-menu">
+                    <li>Мої колекції</li>
+                    <hr>
+                    <li>Реєстрація</li>
+                    <hr>
+                    <li>Вхід</li>
+                    <hr>
+                </menu>
+            </div>
+        </div>
+        <div class="genre-container">
+            
+            <div class="up">
+                <div class="genre" id="first" onclick="showModal('1')">
+                    <p>Фентезі</p>
+                </div>
+                <div class="genre" id="second" onclick="showModal('2')">
+                    <p>Фікшн</p>
+                </div>
+                <div class="genre" id="third" onclick="showModal('3')">
+                    <p>Психологічний роман</p>
+                </div>
+            </div>
+            <div class="down">
+                <div class="genre" id="four" onclick="showModal('4')">
+                    <p>Драма</p>
+                </div>
+                <div class="genre" id="five" onclick="showModal('5')">
+                    <p>Ромком</p>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div id="1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('1')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/Головна.png">
+                    </div>
+                    <div class="text-info" id="1-text">
+                        <P><strong>Назва книги:</strong> Четверте крило </P>
+                        <p><strong>Автор:</strong> Ребекка Ярос</p>
+                        <hr>
+                        <P><strong>Назва книги:</strong> Ці порожні обітниці </P>
+                        <p><strong>Автор:</strong> Лексі Раян</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div id="2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('2')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/Головна.png">
+                    </div>
+                    <div class="text-info" id="2-text">
+                        <P><strong>Назва книги:</strong> Інтернат </P>
+                        <p><strong>Автор:</strong> Сергій Жадан</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div id="3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('3')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/Головна.png">
+                    </div>
+                    <div class="text-info" id="3-text">
+                        <P><strong>Назва книги:</strong> Таємна історія </P>
+                        <p><strong>Автор:</strong> Донна Тарт</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div id="4" class="modal">
+                <div class="modal-content">
+                    <div class="img-block">
+                        <img src="img/Головна.png">
+                    </div>
+                    <span class="close" onclick="closeModal('4')">&times;</span>
+                    <div class="text-info" id="4-text">
+                        <P><strong>Назва книги:</strong> Невеличка драма </P>
+                        <p><strong>Автор:</strong> Валер’ян Підмогильний</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div id="5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('5')">&times;</span>
+                    <div class="img-block">
+                        <img src="img/Головна.png">
+                    </div>
+                    <div class="text-info" id="5-text">
+                        <P>Книги цього жанру відсутні</P>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <footer>
+        <p>Сайт створили студентки групи 3-В Костриця Софія та Дробницька Софія</p>
+        <script src="js/jquery.js"></script>
+        <script src="js/dist/bundle.js"></script>
+        <script>
+
+            function showModal(bookId) {
+                document.getElementById(bookId).style.display = 'block';
+            }
+        
+            function closeModal(bookId) {
+                document.getElementById(bookId).style.display = 'none';
+            }
+
+
+            let count=1;
+            function showModal(bookId) {
+            
+            count = (count>0) ? count-1 : 1;
+            if(count == 0) document.getElementById(bookId).style.display = 'block';
+            if(count == 1) document.getElementById(bookId).style.display = 'none';
+        }
+        </script>
+    </footer>
+    </html>
